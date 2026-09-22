@@ -169,7 +169,7 @@ class TestAccountService(TestCase):
         test_account = AccountFactory()
         resp = self.client.put(f"{BASE_URL}/0", json=test_account.serialize())
         self.assertEqual(resp.status_code, status.HTTP_404_NOT_FOUND)
-    def test_get_account(self)
+    def test_get_account(self):
         """It should Read a single Account"""
         account = self._create_accounts(1)[0]
         resp = self.client.get(
